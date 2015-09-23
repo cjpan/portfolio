@@ -1,78 +1,116 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>My Portofolio</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-  </head>
 
-  <body>
+<head>
+  <meta charset="utf-8">
+  <title>My Portofolio</title>
+  <link rel="shortcut icon" href="images/photo.png">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500" rel="stylesheet">
+  <link href="http://weloveiconfonts.com/api/?family=entypo" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
+</head>
 
-    <div class="container">
-      <header class="header">
-        <div class="row header-content">
-          <div class="col-2">
-            <img class="header-logo" src="images/photo.png" alt="Header Logo">
-          </div>
-          <div class="col-10">
-            <div class="header-title">
-              <h1>Chengjie Pan</h1>
-              <h4>Traveller and Photographer</h4>
-            </div>
+<body>
+
+  <div class="container">
+    <header class="header">
+      <div class="row header-content">
+        <div class="col-2">
+          <img class="header-logo" src="images/photo.png" alt="Header Logo">
+        </div>
+        <div class="col-10">
+          <div class="header-title">
+            <h1>Chengjie Pan</h1>
+            <h4>Traveller and Photographer</h4>
           </div>
         </div>
-      </header>
+      </div>
+    </header>
 
+    <nav id="drawer" class="nav">
+      <ul class="nav-list">
+        <li class="nav-item"><a href="#latest">Latest</a>
+        </li>
+        <li class="nav-item"><a href="#sea-view">Sea View</a>
+        </li>
+        <li class="nav-item"><a href="#history">History</a>
+        </li>
+        <li class="nav-item"><a href="#nature">Nature</a>
+        </li>
+        <li id="menu" class="nav-menu"><img src="images/menu.png">
+        </li>
+      </ul>
+    </nav>
+
+    <nav id="drop-drawer" class="drop-menu">
+      <ul class="drop-list">
+        <li class="drop-item"><a href="#latest">Latest</a>
+        </li>
+        <li class="drop-item"><a href="#sea-view">Sea View</a>
+        </li>
+        <li class="drop-item"><a href="#history">History</a>
+        </li>
+        <li class="drop-item"><a href="#nature">Nature</a>
+      </ul>
+    </nav>
+
+    <main>
       <div class="row">
-        <nav id="drawer" class="nav">
-          <ul class="nav-list">
-            <li class="nav-item"><a href="#">Agenda</a></li>
-            <li class="nav-item"><a href="#">Blog</a></li>
-            <li class="nav-item"><a href="#">Photo</a></li>
-            <li class="nav-item"><a href="#">Note</a></li>
-          </ul>
-        </nav>
+        <section id="Latest" class="cover">
+          <h2 class="cover-title">Latest</h2>
+          <article class="description">
+            <h2><a href="http://chanyouji.com/trips/305662">Hafa Adai, Saipan</a></h2>
+            <p>Blue sky, wide sea and ukulele. Here is where America's day begins.</p>
+          </article>
+        </section>
       </div>
 
-      <main>
-        <div class="row">
-          <section class="cover">
-            <h2 class="cover-title">Latest</h2>
-            <article class="description">
-              <h2><a href="http://chanyouji.com/trips/305662">Hafa Adai, Saipan</a></h2>
-              <p>Blue sky, wide sea and ukulele. Here is where America's day begins.</p>
-            </article>
-          </section>
-        </div>
-
-        <div class="row">
-          <section class="feature">
-            <h2 class="feature-title">Featured Work</h2>
-            <div class="row feature-row">
-              <div class="col-4 feature-col">
-                <img class="thumbnail" src="images/seaview.jpg" alt="Sea View">
-                <div class="feature-text">
-                  <h3><a href="http://chanyouji.com/trips/89536">Sea View</a></h3>
-                </div>
-              </div>
-              <div class="col-4 feature-col">
-                <img class="thumbnail" src="images/history.jpg" alt="Historical Spot">
-                <div class="feature-text">
-                  <h3><a href="http://chanyouji.com/trips/66884" class="feature-text">Historical Spot</a></h3>
-                </div>
-              </div>
-              <div class="col-4 feature-col">
-                <img class="thumbnail" src="images/nature.jpg" alt="Nature">
-                <div class="feature-text">
-                  <h3><a href="http://chanyouji.com/trips/47543">Nature</a></h3>
-                </div>
+      <div class="row">
+        <section class="feature">
+          <h2 class="feature-title">Featured Work</h2>
+          <div class="row feature-row">
+            <div id="sea-view" class="col-4 feature-col">
+              <img class="thumbnail" src="images/seaview_1x.jpg" srcset="images/seaview_1x.jpg 1x, images/seaview_2x.jpg 2x" alt="Sea View">
+              <div class="feature-text">
+                <h3><a href="http://chanyouji.com/trips/89536">Sea View</a></h3>
               </div>
             </div>
-          </section>
-        </div>
-      </main>
-    </div>
-  </body>
+            <div id="history" class="col-4 feature-col">
+              <img class="thumbnail" src="images/history_1x.jpg" srcset="images/history_1x.jpg 1x, images/history_2x.jpg 2x" alt="Historical Spot">
+              <div class="feature-text">
+                <h3><a href="http://chanyouji.com/trips/66884" class="feature-text">History</a></h3>
+              </div>
+            </div>
+            <div id="nature" class="col-4 feature-col">
+              <img class="thumbnail" src="images/nature_1x.jpg" srcset="images/nature_1x.jpg 1x, images/nature_2x.jpg 2x" alt="Nature">
+              <div class="feature-text">
+                <h3><a href="http://chanyouji.com/trips/47543">Nature</a></h3>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script>
+      /*
+       * Open the drop-menu when the menu ison is clicked.
+       */
+      var menu = document.querySelector('#menu');
+      var main = document.querySelector('main');
+      var drop_drawer = document.querySelector('#drop-drawer');
+
+      menu.addEventListener('click', function(e) {
+        drop_drawer.classList.toggle('open');
+        e.stopPropagation();
+      });
+      main.addEventListener('click', function() {
+        drop_drawer.classList.remove('open');
+      });
+    </script>
+
+  </div>
+</body>
+
 </html>

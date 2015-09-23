@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-html {  
+html {
   width: 100%;
   height: 100%;
 }
@@ -22,7 +22,7 @@ h2,
 h3,
 h4,
 h5 {
-  margin: 0; 
+  margin: 0;
 }
 
 /*
@@ -31,18 +31,17 @@ h5 {
  * 
  */
 
-.container{
+.container {
   width: 100%;
   max-width: 960px;
   background-color: white;
   margin: 0 auto;
 }
 
-.row {   
-  width: 100%;   
-/*  margin-bottom: 20px;  */ 
+.row {
+  width: 100%;
   display: flex;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
 }
 
 .col-1 {
@@ -142,21 +141,42 @@ h5 {
   width: 24%;
   text-align: center;
   line-height: 24px;
-  padding: 24px;
-  min-width: 48px;
-  min-height: 48px;
+  padding: 24px 0;
   text-transform: uppercase;
+}
+
+.nav-menu {
+  display: none;
 }
 
 .nav a {
   text-decoration: none;
   color: #747704;
-  padding: 1.5em;
 }
 
 .nav a:hover {
   text-decoration: underline;
   color: #212121;
+}
+
+.drop-menu {
+  background-color: rgba(255, 255, 255, 0.9);
+  font-family: Roboto;
+  font-size: 18px;
+  font-color: white;
+  position: absolute;
+  z-index: 36;
+  display: none;
+}
+
+.drop-list {
+  -webkit-padding-start: 0;
+  margin: 0;
+}
+
+.drop-item {
+  border-top: 1px solid gray;
+  padding: 4px 15px;
 }
 
 /*
@@ -185,10 +205,10 @@ main {
   float: left;
   width: 100%;
   position: relative;
-  background-image: url("../images/cover.jpg");
+  background: -webkit-image-set( url('../images/cover_1x.jpg') 1x, url('../images/cover_2x.jpg') 2x );
   background-size: cover;
   height: 400px;
-  margin-bottom:20px;
+  margin-bottom: 20px;
 }
 
 .cover article {
@@ -199,7 +219,6 @@ main {
   height: 35%;
   width: 100%;
   color: #fff;
-  padding: 1em;
 }
 
 /*
@@ -237,7 +256,7 @@ main {
 }
 
 /* MEDIA QUERIES */
-@media screen and (max-width: 500px) and (min-width: 321px) {
+@media screen and (max-width: 650px) and (min-width: 385px) {
   .header-title {
     font-size: 1em;
   }
@@ -248,16 +267,29 @@ main {
 
   .cover {
     max-height: 200px;
-    margin-bottom:10px;
+    margin-bottom: 10px;
   }
 
   .thumbnail {
     width: 100%;
     max-height: 100px;
   }
+
+  .nav-item {
+    display: none;
+  }
+
+  .nav-menu {
+    padding: 0;
+    display: block;
+  }
+
+  .drop-menu.open {
+    display: block;
+  };
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 384px) {
   .header-title {
     font-size: 1em;
   }
@@ -267,18 +299,24 @@ main {
   }
 
   .nav-item {
-    min-width: 48px;
-    min-height: 48px;
-    padding: 0px;
-    margin-top: 10px;
+    display: none;
+  }
+
+  .nav-menu {
+    padding: 0;
+    display: block;
+  }
+
+  .drop-menu.open {
+    display: block;
   }
 
   .cover {
     max-height: 200px;
-    margin-bottom:10px;
+    margin-bottom: 10px;
   }
 
   .feature-col {
-    width: 100%
-  }
+    width: 100%;
+  };
 }
