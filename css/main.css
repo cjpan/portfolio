@@ -163,7 +163,7 @@ h5 {
   background-color: rgba(255, 255, 255, 0.9);
   font-family: Roboto;
   font-size: 18px;
-  font-color: white;
+  color: white;
   position: absolute;
   z-index: 36;
   display: none;
@@ -205,7 +205,7 @@ main {
   float: left;
   width: 100%;
   position: relative;
-  background: -webkit-image-set( url('../images/cover_1x.jpg') 1x, url('../images/cover_2x.jpg') 2x );
+  background: -webkit-image-set( url(../images/cover_1x.jpg) 1x, url(../images/cover_2x.jpg) 2x );
   background-size: cover;
   height: 400px;
   margin-bottom: 20px;
@@ -318,5 +318,5 @@ main {
 
   .feature-col {
     width: 100%;
-  };
+  }
 }

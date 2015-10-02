@@ -9,6 +9,7 @@
   <link href="http://weloveiconfonts.com/api/?family=entypo" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/main.css">
+  
 </head>
 
 <body>
@@ -38,7 +39,7 @@
         </li>
         <li class="nav-item"><a href="#nature">Nature</a>
         </li>
-        <li id="menu" class="nav-menu"><img src="images/menu.png">
+        <li id="menu" class="nav-menu"><img src="images/menu.png" alt="Menu">
         </li>
       </ul>
     </nav>
@@ -92,24 +93,7 @@
         </section>
       </div>
     </main>
-
-    <script>
-      /*
-       * Open the drop-menu when the menu ison is clicked.
-       */
-      var menu = document.querySelector('#menu');
-      var main = document.querySelector('main');
-      var drop_drawer = document.querySelector('#drop-drawer');
-
-      menu.addEventListener('click', function(e) {
-        drop_drawer.classList.toggle('open');
-        e.stopPropagation();
-      });
-      main.addEventListener('click', function() {
-        drop_drawer.classList.remove('open');
-      });
-    </script>
-
+    <script src="js/drawer.js"></script>
   </div>
 </body>
 
